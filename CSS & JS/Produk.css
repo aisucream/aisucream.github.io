@@ -1,0 +1,477 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "Helvetica", "Arial", "sans-serif";
+}
+
+html {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+#Product {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === Navbar === */
+
+.nav-container {
+  display: flex;
+  background: rgb(249, 255, 255);
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  top: 0;
+  left: 0;
+  position: relative;
+}
+
+.nav-container nav {
+  display: flex;
+  padding: 0px 20px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav-container nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-container nav ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-container nav ul a {
+  text-decoration: none;
+  text-align: center;
+  color: rgb(32, 32, 32);
+  position: relative;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.5s ease-in-out;
+  padding: 0 20px;
+}
+
+.nav-container nav ul button {
+  cursor: pointer;
+  width: 180px;
+  height: 60px;
+  background: #fff;
+  border: 2px solid #eb1d36;
+  background-repeat: no-repeat;
+  padding: 14px 15px;
+  border-radius: 30px;
+  font-weight: bold;
+  color: #eb1d36;
+  font-size: 20px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+  justify-content: center;
+}
+
+.nav-container nav ul button:hover {
+  background: #eb1d36;
+  border: 0;
+  width: 180px;
+  position: relative;
+  color: #fff;
+}
+
+.nav-container nav ul .td:hover,
+.nav-container nav ul .td.active {
+  color: #eb1d36;
+}
+
+.nav-container nav ul .td:hover::after,
+.nav-container nav ul .td.active::after {
+  content: "";
+  width: 30%;
+  height: 3px;
+  background: #7a121e;
+  position: absolute;
+  bottom: -4px;
+  border-radius: 20px;
+  left: 21px;
+}
+
+/* === Navbar end === */
+
+/* === Banner === */
+.banner {
+  background-image: url(../asset/banner\ product.png);
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 0px right 0px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 1000px;
+  height: 300px;
+  margin: 0 3rem;
+  padding: 1rem 2rem 0 0;
+}
+
+.banner h2 {
+  padding-right: 300px;
+  font-size: 40px;
+  font-family: "Poppins";
+  padding-bottom: 10px;
+  color: black;
+}
+
+.banner h4 {
+  font-size: 18px;
+  font-family: "Poppins";
+  padding: 5px 15px;
+  color: #fff;
+  background-color: #eb1d36;
+  font-weight: normal;
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
+
+/* === Banner end=== */
+
+/* === Title ====*/
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.rows {
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.rows h2 {
+  font-family: "Poppins";
+  font-size: 40px;
+  margin: 0 auto;
+  color: #eb1d36;
+  width: 400px;
+}
+.rows p {
+  width: 600px;
+  font-size: 18px;
+  margin: 0 30px;
+  text-align: justify;
+}
+
+.rows a {
+  font-weight: bold;
+  color: #407bff;
+}
+/* === Title end ===*/
+
+/* === Product === */
+.large {
+  font-size: 3rem !important;
+  text-align: center;
+  padding-right: 10px;
+  color: #c1081e;
+}
+
+.product-container {
+  margin: 20px 50px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  width: 1300px;
+}
+
+.product-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 30px 60px;
+  column-gap: 2rem;
+}
+
+.product-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fff;
+  box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.1),
+    0px 115px 46px rgba(0, 0, 0, 0.01), 0px 65px 39px rgba(0, 0, 0, 0.04),
+    0px 29px 29px rgba(0, 0, 0, 0.06), 0px 7px 16px rgba(0, 0, 0, 0.07),
+    0px 0px 0px rgba(0, 0, 0, 0.07);
+  width: 350px;
+  height: 350px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin: 2rem 0;
+  justify-content: center;
+}
+
+.pb-head {
+  display: flex;
+  align-items: center;
+  margin: 30px 10px 20px 20px;
+}
+
+.pb-head h4 {
+  font-size: 25px;
+  font-family: "Poppins";
+}
+
+.product-box p {
+  margin: 0 30px 20px 20px;
+  font-size: 14px;
+}
+
+.product-box a {
+  margin: 0 30px 20px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #407bff;
+}
+
+.divider {
+  width: 80px;
+  background: #eb1d36;
+  height: 8px;
+  margin: 30px 0;
+  border-radius: 10px;
+}
+
+.product-container h2 {
+  font-family: "Poppins";
+  font-size: 40px;
+}
+
+.product-container h2 span {
+  font-family: "Poppins";
+  font-size: 40px;
+  color: #407bff;
+}
+
+.desc {
+  text-align: center;
+  font-size: 18px;
+  padding: 0 130px;
+  line-height: 40px;
+}
+
+.product-container button {
+  cursor: pointer;
+  width: 250px;
+  height: 60px;
+  background: #eb1d36;
+  border: 0;
+  padding: 14px 15px;
+  border-radius: 30px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 21px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+}
+
+.product-container button:hover {
+  background: #fff;
+  border: 2px solid #eb1d36;
+  width: 270px;
+
+  position: relative;
+  color: #eb1d36;
+}
+
+/* === Product end === */
+
+/* === Newsletter === */
+.newsletter {
+  background-image: url(../asset/Banner-bawah.png);
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 0px right 0px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 1000px;
+  height: 300px;
+  margin: 0 3rem;
+  padding: 1rem 2rem 0 0;
+}
+
+.newsletter h2 {
+  font-size: 35px;
+  font-family: "Poppins";
+  padding-bottom: 10px;
+  padding-right: 2rem;
+  margin-right: 15rem;
+  opacity: 100%;
+}
+
+.newsletter p {
+  padding-right: 430px;
+  font-size: 20px;
+  font-family: "Poppins";
+  font-weight: bold;
+  padding-bottom: 10px;
+  color: #407bff;
+}
+
+.newsletter button {
+  cursor: pointer;
+  width: 200px;
+  height: 55px;
+  background: #eb1d36;
+  background-repeat: no-repeat;
+  border: 0;
+  border-radius: 25px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+  justify-content: center;
+}
+
+.newsletter button:hover {
+  background: #fff;
+  border: 2px solid #eb1d36;
+  background-size: 300px;
+  width: 270px;
+  position: relative;
+  color: #eb1d36;
+}
+/* === Newsletter end === */
+
+/* === Footer ==== */
+.footer {
+  margin-top: -0.5rem;
+  padding: 4rem 1rem;
+  box-shadow: 0px -119px 48px rgba(0, 0, 0, 0.01),
+    0px -67px 40px rgba(0, 0, 0, 0.02), 0px -30px 30px rgba(0, 0, 0, 0.03),
+    0px -7px 16px rgba(0, 0, 0, 0.04), 0px 0px 0px rgba(0, 0, 0, 0.04);
+}
+
+.container {
+  max-width: 2000px;
+  margin: auto;
+}
+
+.container ul {
+  list-style: none;
+}
+
+.container ul li {
+  margin-bottom: 13px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.collumn {
+  padding: 12px;
+}
+
+.collumn h4 {
+  font-size: 20px;
+  font-family: "Poppins";
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.collumn h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  background-color: #407bff;
+  height: 2px;
+  width: 50px;
+  box-sizing: border-box;
+}
+
+.collumn a {
+  color: #000;
+  font-size: 16px;
+  transition: all 0.5s ease;
+}
+
+.collumn a span {
+  color: #ce2f2f;
+}
+
+.collumn a:hover {
+  color: #407bff;
+}
+
+.about-us {
+  max-width: 450px;
+}
+
+.about-us a {
+  color: #407bff;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+
+.about-us a:hover {
+  color: #eb1d36;
+  font-weight: bold;
+}
+
+.about-us p {
+  margin-top: 1.5rem;
+  text-align: justify;
+  line-height: 35px;
+}
+/* === Footer end ==== */
